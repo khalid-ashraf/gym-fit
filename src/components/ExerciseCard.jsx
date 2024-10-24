@@ -18,6 +18,7 @@ const ExerciseCard = ({ exercise, i }) => {
         </h2>
         <p className='text-sm text-slate-400 capitalize'>{exercise.type}</p>
       </div>
+
       <div className='flex flex-col'>
         <h3 className='text-slate-400 text-sm'>Muscle Groups</h3>
         <p className='capitalize'>{exercise.muscles.join(" & ")}</p>
@@ -34,7 +35,6 @@ const ExerciseCard = ({ exercise, i }) => {
 
       <div className='grid grid-cols-2 sm:grid-cols-4 sm:place-items-center gap-2'>
         {["reps", "rest", "tempo"].map((info) => {
-          console.log(exercise);
           return (
             <div
               key={info}
@@ -44,6 +44,7 @@ const ExerciseCard = ({ exercise, i }) => {
             </div>
           );
         })}
+
         <button
           onClick={handleSetIncrement}
           className='flex flex-col p-2 rounded border-[1.5px] duration-200 border-solid border-blue-900 hover:border-blue-600 w-full'>
